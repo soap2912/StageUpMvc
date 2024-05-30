@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.LOGO {
+    font-size: 50px;
+}
+
+.pesquisar {
+    width: 500px;
+}
+
+.img {
+    border-radius: 50px;
+    border: 3px solid rgb(175, 33, 33);
+    width: 50px;
+    height: 50px;
+}
+
+.comentar {
+    border: 1px solid black;
+    width: 800px;
+    height: 140px;
+}
+
+.modalButton {
+    width: 700px;
+    font-weight: bolder;
+}
+
+#textbox {
+    opacity: 50%;
+}
+
+.upBtn {
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+.textarea {
+    width: 400px;
+    height: 200px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.textarea {
+    padding-left: 20px;
+    padding-bottom: 150px;
+    /* Espaçamento à esquerda para mover o placeholder */
+    text-align: left;
+    /* Alinhamento do texto à direita */
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+/* Estilos para as mensagens de comentário */
+.comment {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+#fileBtn2 {
+    margin-left: 40px;
+}
+
+#buttons {
+    margin-right: 40px;
+}

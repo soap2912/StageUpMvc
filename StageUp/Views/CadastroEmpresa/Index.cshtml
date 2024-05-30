@@ -1,0 +1,57 @@
+﻿@{
+    Layout = "_LayoutCadastro";
+}
+@using System.Data
+@model StageUp.Models.POCO.Empresa
+@section Link {
+    <link rel="stylesheet" href="~/css/cadastro-empresa.css" />
+}
+@section Scripts{
+    <script src="~/js/CadastroEmpresa.js"></script>
+}
+<form asp-action="Cadastrar" asp-controller="CadastroEmpresa" class="row g-3 mt-2">
+    <div class="col-md-6">
+        <label for="inputNome" class="form-label">Nome:</label>
+        <input type="text" asp-for="Nome"  class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputNome">
+    </div>
+    <div class="col-md-12">
+        <label for="inputCNPJ" class="form-label">CNPJ:</label>
+        <input type="number" asp-for=Cnpj oninput="VerificaCnpj(this.value)" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputCNPJ">
+    </div>
+    <div class="col-md-12">
+        <label for="inputRamo" class="form-label">Ramo:</label>
+        <select id="inputRamo" oninput="ConsultaRamoSetor(this.value)" asp-for=fk_Id_Ramo class="form-select border border-danger" style="--bs-border-opacity: .5;">
+            <option value="-1" selected>Selecione seu ramo</option>
+            @foreach (DataRow row in Model.Ramo.Ramos.Tables[0].Rows)
+            {
+                <option value="@row["Id_Ramo"]">@row["Ramo"]</option>
+            }
+        </select>
+    </div>
+    <div class="col-md-12">
+        <label for="inputSetor" class="form-label">Setor:</label>
+        <select id="inputSetor" asp-for=fk_Id_Setor class="form-select border border-danger" style="--bs-border-opacity: .5;">
+            <option value="-1" selected>Selecione seu ramo</option>
+           
+            @foreach (DataRow row in Model.Setor.Setores.Tables[0].Rows)
+            {
+                <option value="@row["Id_Setor"]">@row["Setor"]</option>
+            }
+        </select>
+    </div>
+    <div class="col-12 text-center">
+        <button type="submit" class="btn btn-danger">Cadastrar-se</button>
+    </div>
+    <div class="col-12 text-center">
+        <p>Já tem uma conta?<a href="@Url.Action("Index","Login")" class="text-danger link-login"> Faça o Login!</a></p>
+    </div>
+</form>
+        </div>
+<div class="col-6 fundo rounded-end-4">
+    <h2 class="text-center mt-5 text-light">Bem-vindo(a) ao Stage<span class="text-danger">Up</span>!</h2>
+    <p class="text-center mt-3 fs-5 text-light">Realize o cadastro de sua empresa em nossa plataforma:</p>
+    <img src="" alt="">
+</div>
+    </div>

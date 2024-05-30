@@ -1,0 +1,102 @@
+﻿@{
+    Layout = "_LayoutCadastro";
+}
+@section Link {
+    <link rel="stylesheet" href="~/css/cadastro.css" />
+}
+@section Scripts {
+    <script src="~/js/CadastroUsuario.js"></script>
+}
+@model StageUp.Models.POCO.Usuario
+
+<form asp-action="Cadastrar" asp-controller="CadastroUsuario" class="row g-3 mt-2">
+    <div class="col-md-6">
+        <label for="inputNome" class="form-label">Nome:</label>
+        <input asp-for=Nome type="text" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputNome">
+    </div>
+    <div class="col-md-6">
+        <label for="inputSobrenome" class="form-label">Sobrenome:</label>
+        <input asp-for=Sobrenome type="text" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputSobrenome">
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email:</label>
+        <input asp-for=Email type="email" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+        <label for="inputCelular" class="form-label">Celular:</label>&nbsp;&nbsp;&nbsp; <span id="SpanCell" style="color: darkred"></span>
+        <input asp-for=Celular oninput="VerificaCell(this.value)" type="number" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputCelular">
+    </div>
+    <div class="col-md-6">
+        <label for="inputSenha" class="form-label">Senha:</label>
+        <input asp-for=Senha oninput="VerificaSenhas(this.value)" type="password" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputSenha">
+    </div>
+    <div class="col-md-6">
+        <label for="inputConf_Senha" class="form-label">Confirmar senha:</label>
+        <input asp-for="Conf_senha" oninput="VerificaSenhas(this.value)" type="password" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputConf_Senha">
+    </div>
+    <div class="col-12">
+        <label for="inputRuaNumero" class="form-label">Rua e Número:</label>
+        <input asp-for=Endereco.Rua type="text" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputRua" placeholder="Rua Valdez, 563">
+    </div>
+    <div class="col-12">
+        <label for="inputBairro" class="form-label">Bairro:</label>
+        <input asp-for=Endereco.Bairro type="text" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputBairro" placeholder="Vasquez">
+    </div>
+    <div class="col-md-6">
+        <label for="inputCidade" class="form-label">Cidade:</label>
+        <input asp-for=Endereco.Cidade type="text" class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputCidade">
+    </div>
+    <div class="col-md-4">
+        <label for="inputEstado" class="form-label">Estado:</label>
+        <select id="inputEstado" asp-for="Endereco.Uf" class="form-select border border-danger" style="--bs-border-opacity: .5;">
+            <option selected>Selecione seu estado</option>
+            <option value="AC">AC - Acre</option>
+            <option value="AL">AL - Alagoas</option>
+            <option value="AP">AP - Amapá</option>
+            <option value="AM">AM - Amazonas</option>
+            <option value="BA">BA - Bahia</option>
+            <option value="CE">CE - Ceará</option>
+            <option value="DF">DF - Distrito Federal</option>
+            <option value="ES">ES - Espírito Santo</option>
+            <option value="GO">GO - Goiás</option>
+            <option value="MA">MA - Maranhão</option>
+            <option value="MT">MT - Mato Grosso</option>
+            <option value="MS">MS - Mato Grosso do Sul</option>
+            <option value="MG">MG - Minas Gerais</option>
+            <option value="PA">PA - Pará</option>
+            <option value="PB">PB - Paraíba</option>
+            <option value="PR">PR - Paraná</option>
+            <option value="PE">PE - Pernambuco</option>
+            <option value="PI">PI - Piauí</option>
+            <option value="RJ">RJ - Rio de Janeiro</option>
+            <option value="RN">RN - Rio Grande do Norte</option>
+            <option value="RS">RS - Rio Grande do Sul</option>
+            <option value="RO">RO - Rondônia</option>
+            <option value="RR">RR - Roraima</option>
+            <option value="SC">SC - Santa Catarina</option>
+            <option value="SP">SP - São Paulo</option>
+            <option value="SE">SE - Sergipe</option>
+            <option value="TO">TO - Tocantins</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <label for="inputCEP" class="form-label">CEP:</label>
+        <input type="number" oninput="ConsultaCep(this.value)" asp-for=Endereco.Cep class="form-control border border-danger" style="--bs-border-opacity: .5;"
+               id="inputCEP">
+    </div>
+    <div class="col-12 text-center">
+        <button type="submit" class="btn btn-danger">Cadastrar-se</button>
+    </div>
+    <div class="col-12 text-center">
+        <p>Já tem uma conta?<a href="@Url.Action("Index","Login")" class="text-danger link-login"> Faça o Login!</a></p>
+    </div>
+</form>

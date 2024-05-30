@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tela-Login */
+
+.LOGO {
+    font-size: 80px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #2b2c2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fundo {
+    background-color: #191a1a;
+}
+
+.link-cadastro {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.space {
+    margin-bottom: 200px;
+}
+
+.block {
+    width: 1500px;
+    height: 600px;
+}

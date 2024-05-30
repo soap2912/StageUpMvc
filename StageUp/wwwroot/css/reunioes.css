@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAV */
+
+.LOGO {
+    font-size: 50px;
+}
+
+.pesquisar {
+    width: 500px;
+}
+
+#InputText {
+    height: 100px;
+    padding-bottom: 60px;
+}
+
+.btn-search {
+    height: 40px;
+}
+
+.modal-banner {
+    border: 2px solid white;
+    width: 465px;
+    height: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+input[type=radio] {
+    border: 2px solid #dc3545;
+    box-shadow: none;
+}
+
+input[type=radio]:checked,
+input[type="radio"]:focus {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    box-shadow: none;
+    outline: none;
+}
+
+.pessoa-pesquisa {
+    width: 250px;
+    height: 80px;
+    margin-left: 1px;
+    margin-bottom: 20px;
+}
+
+.img-pesquisa {
+    border: 2px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.titulo {
+    margin-top: 10px;
+}
+
+.subtitulo {
+    font-size: 14px;
+}
+
+.block {
+    width: 500px;
+    height: 150px;
+}
+
+.img {
+    border: 2px solid white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.btn-contatar {
+    width: 180px;
+    font-weight: 600;
+    margin-right: 150px;
+}
+
+.add_re {
+    width: 300px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: 500;
+}

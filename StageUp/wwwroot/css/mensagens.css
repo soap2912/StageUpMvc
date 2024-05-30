@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAV */
+
+.LOGO {
+    font-size: 50px;
+}
+
+.pesquisar {
+    width: 500px;
+}
+
+.block {
+    width: 800px;
+    height: 150px;
+}
+
+.img {
+    border: 2px solid white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.btn-contatar {
+    width: 180px;
+    font-weight: 600;
+    margin-right: 400px;
+}
+
+.desc-msg {
+    font-weight: 500;
+    color: gray;
+}
+
+
+
+
+
+.container-fluid2 {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.chat-container {
+    flex-grow: 1;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    overflow: hidden;
+}
+
+.users-container {
+    flex-basis: 20%;
+    background-color: #f0f0f0;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto;
+}
+
+.users-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.users-container li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.users-container li:hover {
+    background-color: #e6e6e6;
+}
+
+.chat-messages-container {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.chat-messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.message {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.message .sender {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.message .message-body {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #333;
+}
+
+.message.sent .message-body {
+    background-color: #dcf8c6;
+    color: #333;
+}
+
+.input-group-text {
+    cursor: pointer;
+    background-color: #128C7E;
+    border-color: #128C7E;
+    color: #fff;
+    font-weight: bold;
+}
+
+.input-group-text:hover {
+    background-color: #106e5d;
+    border-color: #106e5d;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.btn-send {
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: auto;
+}
+
+.footer .input-group {
+    margin-bottom: 0;
+}
+
+/* Adicionado */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-messages-container {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+.message-options {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.message:hover .message-options {
+    display: flex;
+    gap: 5px;
+}
+
+.users-container li.active {
+    background-color: #dc3545;
+    color: #fff;
+    border-color: #dc3545;
+}

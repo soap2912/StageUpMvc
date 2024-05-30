@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAV */
+
+.LOGO {
+    font-size: 50px;
+}
+
+.pesquisar {
+    width: 500px;
+}
+
+.Banner {
+    margin-top: 20px;
+    border: 1px solid rgb(175, 33, 33);
+    width: 100rem;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.FtPerfil {
+    border: 5px solid rgb(175, 33, 33);
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-top: 70px;
+    margin-right: 1400px;
+}
